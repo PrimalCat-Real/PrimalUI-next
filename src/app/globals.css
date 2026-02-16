@@ -10,6 +10,14 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  
+   --animate-scaling: animation-scaling 3s ease-in-out infinite;
+
+  @keyframes animation-scaling {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+  }
 }
 
 @media (prefers-color-scheme: dark) {
