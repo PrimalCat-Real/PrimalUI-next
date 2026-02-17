@@ -1,8 +1,16 @@
 @import "tailwindcss";
 
+@property --shine-gradient-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --shine-gradient-percent: 5%;
+  --shine-gradient-angle: 0deg;
 }
 
 @theme inline {
@@ -12,7 +20,7 @@
   --font-mono: var(--font-geist-mono);
 
   
-   --animate-scaling: animation-scaling 3s ease-in-out infinite;
+  --animate-scaling: animation-scaling 3s ease-in-out infinite;
 
   @keyframes animation-scaling {
     0%, 100% { transform: scale(1); }
@@ -24,11 +32,40 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --shine-gradient-percent: 5%;
+    --shine-gradient-angle: 0deg;
   }
 }
 
 @layer base {
 }
+
+@layer utilities {
+  .shiny-border {
+    background: 
+    linear-gradient(var(--color-background), var(--color-background)) padding-box,
+    conic-gradient(
+        from calc(var(--shine-gradient-angle)),
+        transparent,
+        var(--color-blue-300) var(--shine-gradient-percent),
+        var(--color-blue-100) calc(var(--shine-gradient-percent) * 2),
+        var(--color-blue-300) calc(var(--shine-gradient-percent) * 3),
+        transparent calc(var(--shine-gradient-percent) * 4)
+      ) border-box;
+
+    background-origin: border-box;
+  }
+
+  .shiny-border-spin {
+    animation: shine-rotate 3s linear infinite;
+  }
+
+  @keyframes shine-rotate {
+    to { --shine-gradient-angle: 360deg; }
+  }
+}
+
+
 
 body {
   background: var(--background);
