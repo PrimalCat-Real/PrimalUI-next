@@ -11,7 +11,7 @@ const GradientText = ({ render, ...otherProps }: GradientTextProps) => {
     const element = useRender({
         defaultTagName: 'p',
         render,
-        props: mergeProps<'p'>({ className: "inline-block text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-blue-200 to-indigo-400" }, otherProps),
+        props: mergeProps<'p'>({ className: "inline-flex text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-blue-200 to-indigo-400" }, otherProps),
     });
 
     return element;
