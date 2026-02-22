@@ -3,6 +3,7 @@ import GradientBars from "@/modules/primalui/components/aurora/GradientBars";
 import Button from "@/modules/primalui/components/Button";
 import SecondTestButton from "@/modules/primalui/components/SecondTestButton";
 import TestButton from "@/modules/primalui/components/TestButton";
+import GradientText from "@/modules/primalui/components/text/GradientText";
 import Image from "next/image";
 
 import React from 'react'
@@ -18,11 +19,11 @@ const Page = () => {
       </div>
       <div className="w-full h-full flex flex-col items-center">
         <GradientBars curvature={1} heightScale={0.3} minBarsHeight={0.3}>
-          Test
+          <GradientText>Shine gradient text</GradientText>
         </GradientBars>
 
       </div>
-    </div>
+    </div >
 
   )
 }
