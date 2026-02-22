@@ -10,7 +10,7 @@ import React from 'react'
 const Page = () => {
   return (
     <div className="flex flex-col gap-3">
-      <div className="flex gap-2 p-10">
+      <div className="flex gap-2 p-10 relative z-10">
         <Button className="bg-amber-500" variant={'primary'}>Test</Button>
         <TestButton></TestButton>
         <SecondTestButton></SecondTestButton>
