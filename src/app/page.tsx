@@ -20,6 +20,7 @@ const Page = () => {
       <div className="w-full h-full flex flex-col items-center">
         <GradientBars curvature={1} heightScale={0.3} minBarsHeight={0.3}>
           <GradientText>Shine gradient text</GradientText>
+          <GradientText render={<h1 />}>This is h1</GradientText>
         </GradientBars>
 
       </div>
