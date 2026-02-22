@@ -17,8 +17,10 @@ const Page = () => {
 
       </div>
       <div className="w-full h-full flex flex-col items-center">
-        <GradientBars curvature={1} heightScale={0.3} minBarsHeight={0.3} />
-        Test
+        <GradientBars curvature={1} heightScale={0.3} minBarsHeight={0.3}>
+          Test
+        </GradientBars>
+
       </div>
     </div>
 
