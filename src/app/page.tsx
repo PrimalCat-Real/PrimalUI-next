@@ -11,19 +11,22 @@ import React from 'react'
 
 const Page = () => {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 h-[200vh]">
       <div className="flex gap-2 p-10 relative z-10">
         <Button className="bg-amber-500" variant={'primary'}>Test</Button>
         <TestButton></TestButton>
         <SecondTestButton></SecondTestButton>
 
       </div>
-      <div className="w-full h-full flex flex-col items-center">
-        {/* <GradientBars curvature={1} heightScale={0.3} minBarsHeight={0.3}>
-          <GradientText>Shine gradient text</GradientText>
-          <GradientText render={<h1 />}>This is h1</GradientText>
-        </GradientBars> */}
+      <div className="w-full h-fit flex flex-col items-center">
         <div className="w-1/2 h-1/2 flex relative">
+          <GradientBars curvature={1} heightScale={0.3} minBarsHeight={0.3}>
+            <GradientText>Shine gradient text</GradientText>
+            <GradientText render={<h1 />}>This is h1</GradientText>
+          </GradientBars>
+        </div>
+
+        <div className="w-1/2 h-1/2 flex relative overflow-hidden">
           <GlassGradinetBars bars={7}>
 
           </GlassGradinetBars>
