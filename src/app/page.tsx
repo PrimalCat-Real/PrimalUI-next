@@ -47,6 +47,19 @@ const Page = () => {
 
 
       </div>
+      <article className="w-full flex justify-center items-center flex-col">
+        <p>
+          Some my notes what i want to implements
+        </p>
+        <ul>
+          <li>
+            https://ui.aceternity.com/components/tooltip-card
+          </li>
+          <li>
+            https://x.com/i/status/2023607579369500890
+          </li>
+        </ul>
+      </article>
     </div >
 
   )
