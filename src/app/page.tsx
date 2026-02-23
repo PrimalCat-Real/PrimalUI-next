@@ -49,7 +49,7 @@ const Page = () => {
       </div>
       <article className="w-full flex justify-center items-center flex-col">
         <p>
-          Some my notes what i want to implements
+          Some my notes. What I want to implements
         </p>
         <ul>
           <li>
@@ -57,6 +57,15 @@ const Page = () => {
           </li>
           <li>
             https://x.com/i/status/2023607579369500890
+          </li>
+          <li>
+            https://magicui.design/docs/components/animated-theme-toggler
+          </li>
+          <li>
+            https://magicui.design/docs/components/light-rays
+          </li>
+          <li>
+            https://uselayouts.com/docs/components/day-picker
           </li>
         </ul>
       </article>
