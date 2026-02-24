@@ -10,15 +10,14 @@ interface GlassGradientBarsProps {
 const GlassGradientBars = ({ bars = 13, children }: GlassGradientBarsProps) => {
     return (
         <>
-            <div className="absolute inset-0 z-0 overflow-hidden">
-                <div className="flex h-full w-full">
-                    {Array.from({ length: bars }).map((_, index) => (
-                        <div
-                            key={`bg-bar-${index}`}
-                            className={cn("flex-1 relative z-10 border-x border-white/10 backdrop-blur-[80px] bg-linear-to-r from-white/25 via-28% via-black/20 to-white/25")}
-                        />
-                    ))}
-                </div>
+
+            <div className="flex h-full w-full absolute inset-0">
+                {Array.from({ length: bars }).map((_, index) => (
+                    <div className='relative flex flex-1'>
+                        <div className="absolute inset-0 border-x border-white/10 backdrop-blur-[140px] bg-linear-to-r from-white/25 via-28% via-black/20 to-white/25 bg-blend-overlay" />
+                    </div>
+
+                ))}
             </div>
             {children}
         </>
