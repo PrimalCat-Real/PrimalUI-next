@@ -1,10 +1,15 @@
-
+import EnvBadge from "@/components/ui/badges/EnvBadge";
 import GlassGradinetBars from "@/modules/primalui/components/aurora/GlassGradinetBars";
 import GradientBars from "@/modules/primalui/components/aurora/GradientBars";
 import Button from "@/modules/primalui/components/Button";
+import BorderHilightCard from "@/modules/primalui/components/cards/BorderHilightCard";
+import CardGradientBorder from "@/modules/primalui/components/cards/CardGradientBorder";
 import SecondTestButton from "@/modules/primalui/components/SecondTestButton";
 import TestButton from "@/modules/primalui/components/TestButton";
+import TestRotateButton from "@/modules/primalui/components/TestRotateButton";
 import GradientText from "@/modules/primalui/components/text/GradientText";
+import ClientCanvas from "@/modules/primalui/components/three/ClientCanvas";
+import { Canvas } from "@react-three/fiber";
 import Image from "next/image";
 
 import React from 'react'
@@ -12,10 +17,12 @@ import React from 'react'
 const Page = () => {
   return (
     <div className="flex flex-col gap-3 h-[200vh]">
+      <EnvBadge className="absolute"></EnvBadge>
       <div className="flex gap-2 p-10 relative z-10">
         <Button className="bg-amber-500" variant={'primary'}>Test</Button>
         <TestButton></TestButton>
         <SecondTestButton></SecondTestButton>
+        <TestRotateButton></TestRotateButton>
 
       </div>
       <div className="w-full h-fit flex flex-col items-center">
@@ -30,7 +37,7 @@ const Page = () => {
           <GlassGradinetBars bars={7}>
 
           </GlassGradinetBars>
-          <svg width="1957" height="531" viewBox="0 0 1957 531" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="" width="1957" height="531" viewBox="0 0 1957 531" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="120.404" cy="472.363" rx="120.404" ry="472.363" transform="matrix(0.716952 0.697122 -0.960942 0.276749 907.827 75.563)" fill="#FF1DEC" />
             <ellipse cx="92.3931" cy="362.471" rx="92.3931" ry="362.471" transform="matrix(0.716952 0.697122 -0.960942 0.276749 822.31 125.503)" fill="#FECDF8" />
             <ellipse cx="119.055" cy="478.581" rx="119.055" ry="478.581" transform="matrix(-0.684223 0.729273 -0.967175 -0.25411 1166.27 243.224)" fill="#FF1DEC" />
@@ -47,6 +54,29 @@ const Page = () => {
 
 
       </div>
+      <div className="flex flex-col h-fit w-full items-center">
+        <div className="flex w-full gap-4 justify-center">
+          <BorderHilightCard className="flex justify-center items-center">
+            <div className="flex">Simple Inside</div>
+          </BorderHilightCard>
+
+
+
+        </div>
+        <div>
+          <CardGradientBorder
+            type="linear"
+            // from="#3b82f6"
+            // via="#a855f7"
+            // to="#ec4899"
+            className="p-6 w-full bg-purple-200/10 bg-linear via-purple-200 from-blue-400 to-transparent flex flex-col justify-center items-center rounded-t-xl"
+          >
+            <h3 className="text-lg font-medium text-white">Linear with Via</h3>
+            <p className="text-sm text-zinc-400">Blue - Purple - Pink</p>
+          </CardGradientBorder>
+        </div>
+      </div>
+      <ClientCanvas></ClientCanvas>
       <article className="w-full flex justify-center items-center flex-col">
         <p>
           Some my notes. What I want to implements

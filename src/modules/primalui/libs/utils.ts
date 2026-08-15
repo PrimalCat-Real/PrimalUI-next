@@ -5,4 +5,6 @@ const cn = (...inputs: ClassValue[]) => {
     return twMerge(clsx(inputs))
 }
 
-export {cn}
+const cssColorKeywords = ["transparent", "white", "black", "currentColor", "inherit", "initial"]
+
+export {cn, cssColorKeywords}
